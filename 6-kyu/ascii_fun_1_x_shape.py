@@ -1,5 +1,4 @@
-# https://www.codewars.com/kata/5906436806d25f846400009b/train/python
-
+# https://www.codewars.com/kata/5906436806d25f846400009b
 import numpy as np
 
 def x(n):
