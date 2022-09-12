@@ -20,3 +20,33 @@ def calculate(expr, values):
 
 # but! clever solution is:
 calculate = eval
+
+
+
+## one of really clever solutions:
+
+import operator
+import random
+
+precedence = ["&", "|"]
+operations = {
+    "&": operator.and_,
+    "|": operator.or_
+}
+
+def simple_eval1(expr, values):
+    tokens = expr.split(" ")
+    for idx, token in enumerate(tokens):
+        tokens[idx] = values.get(token, token)
+    
+    for operation in precedence:
+        i = 0
+        while i < len(tokens) - 2:
+            lhs, op, rhs = tokens[i : i + 3]
+            if op == operation:
+                tokens[i] = operations[op](lhs, rhs)
+                del tokens[i + 1 : i + 3]
+            else:
+                i += 2
+        
+    return tokens[0]
