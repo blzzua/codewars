@@ -32,5 +32,3 @@ def decomp(n):
     for k in range(2,n+1):
         res = res + Counter(factorize(k))
     return ' * '.join([ f'{k}' + f'^{res[k]}' if res[k] > 1 else f'{k}' for k in sorted(list(res)) ])
-
-
