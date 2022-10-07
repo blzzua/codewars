@@ -8,4 +8,3 @@ def max_zero_sequence(arr):
                 result = arr[start:end]
                 break
     return result
-
