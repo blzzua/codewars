@@ -12,5 +12,3 @@ def reverse_in_parentheses(string):
             del stack[cursor:-1]
     res = ''.join(stack)
     return res
-
-
