@@ -12,3 +12,12 @@ values(3006, 'Stefan Huk', 'Kyiv', 500, 5007);
 select * from customers
 where city in ('London', 'Kyiv')
 order by id;
+
+---------------------------------
+select o.order_num, o.amount, c.name
+from orders o 
+join customers c on o.customer_id = c.id
+where o.amount between 500 and 2000
+order by o.amount
+
+---------------------------------
