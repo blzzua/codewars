@@ -21,3 +21,18 @@ where o.amount between 500 and 2000
 order by o.amount
 
 ---------------------------------
+
+select name, city, grade
+from customers
+where city in ('London', 'Paris')
+order by name
+
+---------------------------------
+update customers
+set city = 'Paris', grade = '300'
+where name = 'Jozy Altidore';
+
+select name, city, grade
+from customers
+where city in ('London', 'Paris')
+order by id;
