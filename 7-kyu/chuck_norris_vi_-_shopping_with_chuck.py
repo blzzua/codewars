@@ -1,4 +1,4 @@
-# chuck_norris_vi_-_shopping_with_chuck.py
+# https://www.codewars.com/kata/5706be574f2c297a7b00060d
 
 soil_map = {'Barely used': 0.1, 'Seen a few high kicks': 0.25, 'Blood stained': 0.30, 'Heavily soiled': 0.50}
 
