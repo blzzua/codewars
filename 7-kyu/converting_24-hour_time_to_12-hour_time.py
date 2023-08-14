@@ -1,5 +1,6 @@
 # https://www.codewars.com/kata/59b0ab12cf3395ef68000081
 
+def to12hourtime(time):
     hh = int(timestring[:2])
     mm = str(timestring[2:])
     if hh > 12:
