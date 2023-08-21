@@ -11,4 +11,4 @@ def rank_of_element(arr, i):
             c2 += 1
     return c1 + c2
 
-# compact-clever sum(x <= arr[i] if n < i else x < arr[i] for n,x in enumerate(arr))
+# compact-clever sum(item <= arr[i] for item in arr[:i]) + sum(item < arr[i] for item in arr[i+1:])
