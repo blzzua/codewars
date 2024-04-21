@@ -9,3 +9,15 @@ def array_change(arr):
             accum += prev - cur + 1
             a[i] = prev + 1
     return accum
+
+# with accum, without mutable array
+def array_change(arr):
+    accum, prev = 0, arr[0]
+    for cur in arr[1:]:
+        if prev >= cur:
+            accum += prev - cur + 1
+            prev += 1
+        else:
+            prev = cur
+    return accum
+    
