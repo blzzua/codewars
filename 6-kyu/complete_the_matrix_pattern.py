@@ -1,7 +1,6 @@
 # https://www.codewars.com/kata/582c01ad3fd1cc5736000348
 
 import numpy as np
-
 def make_matrix(m: int, n: int) -> str:
     a = np.ndarray((n,n),dtype=object)
     s = str(m)
