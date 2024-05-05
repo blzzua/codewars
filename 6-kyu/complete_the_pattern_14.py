@@ -17,7 +17,7 @@ def wavegen(n,m):
                 m -= 1
                 continue
         yield i
-
+    
 def pattern(n, y=1, *args):
     res = []
     y = max(y,1)
