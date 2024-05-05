@@ -8,3 +8,4 @@ def pattern(n):
             s[j] = str((n - i) % 10)
         res.append(''.join(s))
     return '\n'.join(res)
+    
