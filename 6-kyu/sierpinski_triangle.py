@@ -1,7 +1,7 @@
 # https://www.codewars.com/kata/58add662ea140541a50000f7
 
 import numpy as np 
-def sierpinski(n):
+def sierpinski(n): # ver 1
     if n == 1: return ' * \n* *'
     # base 4x4 triangle
     base_size = 4 
@@ -27,3 +27,15 @@ def sierpinski(n):
         line =  (' ' * offset + ' '.join(row))[:linelen]
         res_array.append(line)
     return '\n'.join(res_array)
+
+
+
+def sierpinski(n): # ver 2
+    base = np.array('*').reshape((1,1))
+    empty = np.array(' ').reshape((1,1))
+    for i in range(n): #
+        result = np.block([[base, empty], [base, base]])
+        base = np.copy(result)
+        empty = np.block([[empty, empty], [empty, empty]])
+    # inline result formatting:
+    return '\n'.join([(' ' * (result.shape[0] - i -1) + ' '.join(row))[:(result.shape[0] * 2 - 1)] for i, row in enumerate(result)])
