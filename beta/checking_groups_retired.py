@@ -26,3 +26,4 @@ def group_check(s):
     else:
         return True
 
+# see also https://www.codewars.com/kata/5277c8a221e209d3f6000b56
