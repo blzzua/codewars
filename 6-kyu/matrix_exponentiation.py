@@ -18,10 +18,10 @@ def calc(matrix, n):
 # the way of optimization: if n is large, then factor it, find the factors and remember the successive raising to the power, raise the squares of the matrices, etc.
 
 def multiply_two_square_matrices(A, B):
-	return [[sum([a*b for a,b in zip(row, col)]) for col in list(zip(*B))] for row in A]
+    return [[sum([a*b for a,b in zip(row, col)]) for col in list(zip(*B))] for row in A]
 
 def calc(matrix, n):
-	if n % 2 == 1: 
+    if n % 2 == 1: 
         return multiply(matrix, calc(multiply_two_square_matrices(matrix, matrix), (n - 1) // 2))
-	else: # n % 2 == 0
+    else: # n % 2 == 0
         return calc(multiply_two_square_matrices(matrix, matrix), n // 2)
