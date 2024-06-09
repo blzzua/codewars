@@ -24,11 +24,4 @@ def dbl_linear(n):
     raise ValueError(n)
 
 
-# also clever bidouille solution with precomputed with sorting:
-twice_linear = {1}
-for n in range(1, 1600000):
-    if n / 2 in twice_linear or n / 3 in twice_linear:
-        twice_linear.add(n+1)
-twice_linear = sorted(twice_linear)
-def dbl_linear(n):
-    return twice_linear[n]
+# this kata can be done with heapq 
