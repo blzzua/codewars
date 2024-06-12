@@ -17,3 +17,4 @@ def solve(arr):
                 if v2-v1 == v3-v3:
                     res += 1
     return res              
+
