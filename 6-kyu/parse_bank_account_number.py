@@ -12,3 +12,4 @@ def parse_bank_account(bank_account):
     bank_account = bank_account.strip('\n')
     cols = list(zip(*bank_account.split('\n')))
     return int(''.join([str(digit_map.get(code_tuple,0))  for code_tuple in zip(cols[0::3], cols[1::3], cols[2::3])]))
+
