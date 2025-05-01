@@ -10,3 +10,11 @@ class Converter():
     @staticmethod
     def to_hex(s):
         return ''.join(map(lambda c: '{:x}'.format(ord(c)), s))
+
+
+# clever:
+    def to_ascii(h):
+        return bytes.fromhex(h).decode()
+    
+    def to_hex(s):
+        return s.encode().hex()
