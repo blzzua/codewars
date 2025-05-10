@@ -28,3 +28,14 @@ def summary_ranges(arr):
 
 
 
+# optimized by Unnamed:
+def summary_ranges(xs):
+    res = []
+    i = 0
+    while i < len(arr):
+        j = i
+        while j + 1 < len(arr) and arr[j + 1] - arr[j] <= 1:
+            j += 1
+        res.append(str(arr[i]) if arr[i] == arr[j] else f'{arr[i]}->{a[j]}')
+        i = j + 1
+    return res   
