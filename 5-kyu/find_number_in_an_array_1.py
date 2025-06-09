@@ -24,3 +24,18 @@ def duplicate_or_unique(inList):
                 seen.add(v)
             else:
                 return v
+
+# tricky, use property that all numbers are from 1 to n - not random. just check if that numbers are mostly dupes or uniq, using probabilistic max_value property.
+def duplicate_or_unique(inList):
+    full_len = len(inList)
+    sum_list = sum(inList)
+    half_len = (full_len + 1) // 2
+    max_value = max(inList)
+    sum_on_uniq = half_len * (half_len + 1) // 2
+    sum_on_dup = ((full_len - 1) * full_len) // 2 
+    if max_value == full_len - 1:
+        #print('one duplicate')
+        return sum_list - sum_on_dup
+    else:
+        #print('one unique')
+        return sum_on_uniq - (sum_list - sum_on_uniq)
