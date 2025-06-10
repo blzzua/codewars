@@ -1,5 +1,6 @@
-# https://www.codewars.com/kata/58b626ee2da07adf3e00009c
-# Simple Fun #171: Get Candy Position
+# https://www.codewars.com/kata/59dbab4d7997cb350000007f
+# Check if two words are isomorphic to each other
+
 
 def tokenize(a):
     a_dict = dict()
