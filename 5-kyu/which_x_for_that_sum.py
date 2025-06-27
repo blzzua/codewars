@@ -1,3 +1,5 @@
+# https://www.codewars.com/kata/5b1cd19fcd206af728000056
+
 # f(x, n)  = x + 2x**2 + 3x**3 + .. + nx**n when n -> inf; so 
 # very similar to some Tailor-Maclaurin series. task is find that function
 # some math from 1/(1-x) = sum(i * x**i for i in range(0..inf )) 
