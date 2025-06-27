@@ -1,5 +1,5 @@
 # https://www.codewars.com/kata/60512be8bbc51a000a83d767
-
+# https://en.wikipedia.org/wiki/Knuth%27s_up-arrow_notation
 def operator(a, n, b):
     if n == 0:
         return b + 1
