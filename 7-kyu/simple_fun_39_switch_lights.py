@@ -8,3 +8,12 @@ def switch_lights(arr):
                 arr[j] = 1 - arr[j]
     return arr
 
+# works
+def switch_lights(arr):
+    res = arr[:]
+    lights_left = sum(arr)
+    for i, cur_light in enumerate(arr):
+        res[i] = (cur_light + lights_left) % 2
+        if cur_light == 1:
+            lights_left = lights_left - 1
+    return res
